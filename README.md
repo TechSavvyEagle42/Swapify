@@ -1,16 +1,20 @@
 # Swapify Barter App
-
-Welcome to the Swapify Barter App – your premier platform for modern bartering and trading. Step into a realm of smart exchanges, tailor-made for individuals who value the art of swapping goods and services. Discover a dynamic marketplace where you can redefine the way you acquire what you desire. Elevate your personal interactions and create meaningful connections through our meticulously designed bartering platform. Whether you're seeking unique items or offering your specialized skills, the Swapify Barter App is your gateway to a new world of exchange.
+Welcome to Swapify, your premier platform for modern bartering and trading. Swapify is a dynamic web application built entirely in vanilla JavaScript, designed to revolutionize the way individuals swap goods and services.
 
 ## Key Features
-- Sign in With Google
-- Firebase Authentication
-- Firebase Cloud Firestore
-- Firebase Realtime Database
-- Firebase Storage
+- **Sign in With Google:** Easily authenticate and access your account.
+- **Firebase Integration:** Utilizes Firebase services for authentication, real-time database storage with Firestore, and efficient file storage with Firebase Storage.
+- **Responsive Design:** Ensures an optimal viewing experience across various devices.
+- **Seamless Exchanges:** Facilitates smart exchanges for individuals who value the art of swapping.
+- **Meaningful Connections:** Create meaningful connections through tailored exchanges.
+- **Chat Feature:** Engage in real-time conversations with other users through our integrated chat feature.
 
-## HTML, CSS, JavaScript, Firebase, ESLint, and Parcel
-Follow these steps to seamlessly integrate Firebase services, including Google Authentication, into your Web Application.
+## Technologies Used
+- **Frontend:** HTML, CSS, and JavaScript.
+- **Backend:** Firebase services for authentication, database operations, and file storage.
+- **Development Tools:** ESLint for code linting and consistency, Parcel for bundling and optimizing the application.
+- **Git Hooks:** Integrated Husky for running pre-commit hooks to ensure code quality.
+
 
 ## Use Node.js
 
@@ -38,19 +42,6 @@ This command will run ESLint with the `--fix` option, which automatically applie
 
 ```bash
 npm run lint-fix
-```
-
-## Environment Variables
-Create a `.env.local` file in the root directory of your project and add the Firebase configuration values as environment variables:
-
-```env
-PUBLIC_FIREBASE_API_KEY=
-PUBLIC_FIREBASE_AUTH_DOMAIN=
-PUBLIC_FIREBASE_DATABASEURL=
-PUBLIC_FIREBASE_PROJECT_ID=
-PUBLIC_FIREBASE_STORAGE_BUCKET=
-PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-PUBLIC_FIREBASE_APP_ID=
 ```
 
 ## Firebase Configuration
@@ -117,6 +108,19 @@ Before running the application, obtain the Firebase configuration values from yo
     }
     ```
 
+
+## Environment Variables
+Create a `.env.local` file in the root directory of your project and add the Firebase configuration values as environment variables:
+
+```env
+PUBLIC_FIREBASE_API_KEY=
+PUBLIC_FIREBASE_AUTH_DOMAIN=
+PUBLIC_FIREBASE_DATABASEURL=
+PUBLIC_FIREBASE_PROJECT_ID=
+PUBLIC_FIREBASE_STORAGE_BUCKET=
+PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+PUBLIC_FIREBASE_APP_ID=
+```
 ---
 
 Remember to follow these steps carefully to ensure a smooth integration of your Web App with Firebase services.
