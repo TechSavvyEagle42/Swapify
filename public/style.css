@@ -115,6 +115,19 @@ body {
     margin-bottom: 10px;
 }
 
+/* Styles for author avatar */
+.author-avatar-div {
+    margin-right: 10px;
+}
+
+.author-avatar-img {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    border-radius: 50%; /* To make the avatar round */
+    object-fit: cover; /* To maintain aspect ratio */
+}
+
+
 /* Styles for item author */
 .item-author {
     font-style: italic;

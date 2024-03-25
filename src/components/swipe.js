@@ -14,15 +14,20 @@ class Component extends HTMLElement {
       // Define HTML content for the item card
       this.innerHTML =  /*html*/`
         <div class="card-item-container">
-          <div class="item-info-container">
-            <h1 class="item-title"></h1>
-            <p class="item-author"></p>
-            <p class="item-description"></p>
-            <div class="item-swipe-left">Swipe Left</div>
-            <div class="item-swipe-right">Swipe Right</div>
-            <div class="item-chat-action">Chat</div>
-          </div>
-          <img class="item-img" src="">
+            <div class="item-info-container">
+                <div class="author-avatar-div">
+                    <img class="author-avatar-img src="">
+                </div>
+                <div class="author-info">
+                    <h1 class="item-title"></h1>
+                    <p class="item-author"></p>
+                </div>
+                <p class="item-description"></p>
+                <div class="item-swipe-left">Swipe Left</div>
+                <div class="item-swipe-right">Swipe Right</div>
+                <div class="item-chat-action">Chat</div>
+            </div>
+            <img class="item-img" src="">
         </div>
       `
 
@@ -221,6 +226,10 @@ function updateItemCard(item) {
     // Update item title
     const itemTitle = document.querySelector('.item-title')
     itemTitle.textContent = item.getTitle()
+
+    // Update item avatar
+    const avatarImg = document.querySelector('.author-avatar-img')
+    avatarImg.src = item.getAvatar()
 
     // Update item author
     const itemAuthor = document.querySelector('.item-author')
