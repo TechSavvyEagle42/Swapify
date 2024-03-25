@@ -2,12 +2,10 @@
 Welcome to Swapify, your premier platform for modern bartering and trading. Swapify is a dynamic web application built entirely in vanilla JavaScript, designed to revolutionize the way individuals swap goods and services.
 
 ## Key Features
+- **Responsive Design:** Ensures an optimal viewing experience across various devices.
+- **Chat Feature:** Engage in real-time conversations with other users through our integrated chat feature.
 - **Sign in With Google:** Easily authenticate and access your account.
 - **Firebase Integration:** Utilizes Firebase services for authentication, real-time database storage with Firestore, and efficient file storage with Firebase Storage.
-- **Responsive Design:** Ensures an optimal viewing experience across various devices.
-- **Seamless Exchanges:** Facilitates smart exchanges for individuals who value the art of swapping.
-- **Meaningful Connections:** Create meaningful connections through tailored exchanges.
-- **Chat Feature:** Engage in real-time conversations with other users through our integrated chat feature.
 
 ## Technologies Used
 - **Frontend:** HTML, CSS, and JavaScript.
@@ -43,6 +41,8 @@ This command will run ESLint with the `--fix` option, which automatically applie
 ```bash
 npm run lint-fix
 ```
+
+<br>
 
 ## Firebase Configuration
 Before running the application, obtain the Firebase configuration values from your Firebase project's settings in the Firebase console. These values will be used as environment variables in your .env file. Follow these steps:
