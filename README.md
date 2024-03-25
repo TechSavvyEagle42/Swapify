@@ -42,8 +42,6 @@ This command will run ESLint with the `--fix` option, which automatically applie
 npm run lint-fix
 ```
 
-<br>
-
 ## Firebase Configuration
 Before running the application, obtain the Firebase configuration values from your Firebase project's settings in the Firebase console. These values will be used as environment variables in your .env file. Follow these steps:
 
