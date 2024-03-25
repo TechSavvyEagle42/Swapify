@@ -3,12 +3,12 @@ class Component extends HTMLElement {
     super()
   
     this.innerHTML = /*html*/`
-      <ul>
-        <li><a href="/">Swipe</a></li>
-        <li><a href="/#/gallery">Gallery</a></li>
-        <li><a href="/#/about">About</a></li>
-        <li><a href="/#/auth">Logout</a></li>
-      </ul>
+      <div class="custom-navigation">
+        <div><a href="/" class="nav-link">Swipe</a></div>
+        <div><a href="/#/gallery" class="nav-link">Gallery</a></div>
+        <div><a href="/#/about" class="nav-link">About</a></div>
+        <div><a href="/#/auth" class="nav-link">Logout</a></div>
+      </div>
     `
   }
 }

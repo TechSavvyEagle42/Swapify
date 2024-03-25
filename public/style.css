@@ -62,6 +62,35 @@ body {
 
 /**********************************************************************************/
 
+.custom-navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    /* Background color for the navigation */
+    padding: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    /* Text color for the links */
+    font-size: 18px;
+    /* Font size for the links */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: #ccc;
+    /* Background color on hover */
+    color: #fff;
+    /* Text color on hover */
+}
+
+
+/**********************************************************************************/
+
 /* Styles for the container of individual item cards */
 .card-item-container {
     display: flex;
