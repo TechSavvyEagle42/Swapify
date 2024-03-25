@@ -44,7 +44,7 @@ class Component extends HTMLElement {
   async connectedCallback() {
     try {
       // Define HTML content for the chat component
-      const htmlContent = /*html*/ `
+      this.innerHTML = /*html*/ `
         <div class="chat-avatar-container">
           <img class="chat-avatar-img" src="" alt="Avatar">
           <span class="chat-avatar-name"></span>
@@ -57,9 +57,6 @@ class Component extends HTMLElement {
       
       // Fetch chat data asynchronously
       await fetchChat()
-
-      // Set the HTML content directly to the component
-      this.innerHTML = htmlContent
 
     } catch (error) {
       // Log an error message if there is an issue rendering the chat component

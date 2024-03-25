@@ -15,7 +15,7 @@ class Component extends HTMLElement {
   async connectedCallback() {
     try {
       // Define HTML content for the item card
-      const htmlContent = `
+      this.innerHTML =  /*html*/`
         <div class="timeline">
           <!-- Timeline items will be rendered here -->
         </div>
@@ -75,8 +75,6 @@ class Component extends HTMLElement {
           </div>
         </div>
       `
-      // Set the HTML content to the component
-      this.innerHTML = htmlContent
 
       // Call the script function to handle authentication state and data fetching
       await script()

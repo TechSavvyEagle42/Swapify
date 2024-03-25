@@ -39,16 +39,13 @@ class Component extends HTMLElement {
   async connectedCallback() {
     try {
       // Define HTML content for the contact list
-      const htmlContent = /*html*/ `
+      this.innerHTML = /*html*/ `
         <div class="contact-list">
         </div>
       `
       
       // Call the script function to handle authentication state and data fetching
       await script()
-
-      // Set the HTML content directly to the component
-      this.innerHTML = htmlContent
 
     } catch (error) {
       // Log an error message if there is an issue rendering the contact list due to a failure in fetching contacts.

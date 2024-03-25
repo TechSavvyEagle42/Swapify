@@ -12,7 +12,7 @@ class Component extends HTMLElement {
   async connectedCallback() {
     try {
       // Define HTML content for the item card
-      const htmlContent = ` 
+      this.innerHTML =  /*html*/`
         <div class="card-item-container">
           <div class="item-info-container">
             <h1 class="item-title"></h1>
@@ -28,9 +28,6 @@ class Component extends HTMLElement {
 
       // Call the script function to handle authentication state and data fetching
       await script()
-
-      // Set the HTML content to the component
-      this.innerHTML = htmlContent
 
     } catch (error) {
       // Log the error for debugging purposes
