@@ -55,10 +55,8 @@ class Component extends HTMLElement {
         </div>
 
         <div class="chat-input-container">
-          <input type="text" class="chat-input" placeholder="Type your message here">
-          <button class="chat-send-button">
-            <i class="fi fi-sr-paper-plane-top"></i>
-          </button>
+          <input type="text" class="chat-input" placeholder="Type your message here"> 
+          <i class="chat-send-button fi fi-sr-paper-plane-top"></i>
         </div>
       `
       
