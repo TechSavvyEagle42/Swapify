@@ -53,6 +53,13 @@ class Component extends HTMLElement {
         <div class="chat-message-container">
           <!-- Messages will be rendered here -->
         </div>
+
+        <div class="chat-input-container">
+          <input type="text" class="chat-input" placeholder="Type your message here">
+          <button class="chat-send-button">
+            <i class="fi fi-sr-paper-plane-top"></i>
+          </button>
+        </div>
       `
       
       // Fetch chat data asynchronously

@@ -1,5 +1,5 @@
 {
-  "name": "vanilla-spa",
+  "name": "swapify",
   "version": "1.0.0",
   "description": "SPA setup using HTML, CSS, JavaScript, Firebase, ESLint, and Parcel",
   "scripts": {
@@ -31,6 +31,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/johndeniel/vanilla-spa"
+    "url": "https://github.com/johndeniel/Swapify"
   }
 }
