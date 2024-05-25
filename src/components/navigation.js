@@ -1,17 +1,33 @@
 import { getAuth, signOut } from 'firebase/auth'
 
+
+
+
+
 class Component extends HTMLElement {
   constructor() {
     super()
   
-    this.innerHTML = /*html*/`
-      <div class="custom-navigation">
-       <a href="/" class="nav-link">Swipe</a>
-       <a href="/#/gallery" class="nav-link">Gallery</a>
-       <a href="/#/about" class="nav-link">About</a>
-       <a class="nav-link logout">Logout</a>
-      </div>
-    `
+    this.innerHTML = /*html*/ `
+  <div class="custom-navigation">
+    <div class="navigation-divider">
+      <img src="https://firebasestorage.googleapis.com/v0/b/scent-danielle.appspot.com/o/asset%2Fswapify-logo.png?alt=media&token=f02f4f47-c419-491d-891c-4bae54755b90" class="swapify-logo" alt="Swapify Logo">
+    </div>
+    <div class="navigation-links">
+    <a href="/" class="nav-link">
+    <i class="fi fi-ss-home"></i>  
+    Home
+    <span class="loading-animation"></span> 
+    </a>
+    <a href="/#/gallery" class="nav-link">Gallery
+    <span class="loading-animation"></span></a>
+    <a href="/#/about" class="nav-link">About
+    <span class="loading-animation"></span></a>
+    <a class="nav-link logout">Logout
+    <span class="loading-animation"></span></a>
+    </div>
+  </div>
+`
 
     // Add event listener for the button click inside the render method
     document.addEventListener('click', handleLogoutButtonClick)

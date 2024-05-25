@@ -11,6 +11,7 @@ const renderGallery = {
         </aside>
 
         <main class="main-content">
+          <div class = "text-gallery">Gallery</div>
           <custom-gallery-component></custom-gallery-component>
         </main>
 

@@ -16,18 +16,27 @@ class Component extends HTMLElement {
         <div class="card-item-container">
             <div class="item-info-container">
                 <div class="author-avatar-div">
-                    <img class="author-avatar-img src="">
-                </div>
-                <div class="author-info">
-                    <h1 class="item-title"></h1>
+                    <img class="author-avatar-img" src="">
                     <p class="item-author"></p>
                 </div>
-                <p class="item-description"></p>
-                <div class="item-swipe-left">Swipe Left</div>
-                <div class="item-swipe-right">Swipe Right</div>
-                <div class="item-chat-action">Chat</div>
+                <div class="item-info">
+                  <div class="item-pic">           
+                   <img class="item-img" src="">               
+                      </div>
+                  <div class = "item-text">
+                  <h1 class="item-title"></h1>
+                  <p class="item-description"></p>
+                  </div>  
+                </div>           
             </div>
-            <img class="item-img" src="">
+              <div class="item-buttons"> 
+               <div class="item-swipe-left">Swipe Left</div>
+               <div class="item-chat-action">Chat</div>
+               <div class="item-swipe-right">Swipe Right</div>
+              </div>
+              
+              
+             
         </div>
       `
 

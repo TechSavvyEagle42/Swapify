@@ -16,64 +16,65 @@ class Component extends HTMLElement {
     try {
       // Define HTML content for the item card
       this.innerHTML =  /*html*/`
-        <div class="timeline">
-          <!-- Timeline items will be rendered here -->
-        </div>
-
-        <!-- Floating Action Button (FAB) -->
-        <button class="gallery-upload-fab-button">Add Item</button>
-      
-        <!-- Upload Image Dialog -->
-        <div class="gallery-upload-dialog">
-          <div class="gallery-upload-card">
-            <div class="gallery-upload-card-title">Upload Image</div>
-
-            <form class="gallery-upload-form">
-
-              <!-- Display selected image -->
-              <img class="gallery-upload-uploaded-image" src="#" alt="Selected Image" style="display: none;">
-
-              <div class="gallery-upload-hint">Choose an image:</div>
-              <input type="file" class="gallery-upload-image" name="imageFile" accept="image/*" required>
-
-              <div class="gallery-upload-hint">Title:</div>
-              <input type="text" class="gallery-upload-title" name="title" required>
-
-              <div class="gallery-upload-hint">Description:</div>
-              <textarea class="gallery-upload-description" name="description" rows="4" required></textarea>
-
-              <!-- Cancel and Upload buttons in the same line -->
-              <div class="gallery-upload-button-container">
-                <button type="button" class="gallery-upload-cancel-button">Cancel</button>
-                <button type="submit">Upload</button>
-              </div>
-
-            </form>
+      <div class="timeline">
+      <!-- Timeline items will be rendered here -->
+    </div>
+  
+    <!-- Floating Action Button (FAB) -->
+    <button class="gallery-upload-fab-button">Add Item</button>
+  
+    <!-- Upload Image Dialog -->
+    <div class="gallery-upload-dialog">
+      <div class="gallery-upload-card">
+        <div class="gallery-upload-card-title">Upload Image</div>
+  
+        <form class="gallery-upload-form">
+  
+          <!-- Display selected image -->
+          <img class="gallery-upload-uploaded-image" src="#" alt="Selected Image" style="display: none;">
+  
+          <div class="gallery-upload-hint">Choose an Image</div>
+          <input type="file" class="gallery-upload-image" name="imageFile" accept="image/*" required>
+  
+          <div class="gallery-upload-hint">Title</div>
+          <input type="text" class="gallery-upload-title" name="title" required>
+  
+          <div class="gallery-upload-hint">Description</div>
+          <textarea class="gallery-upload-description" name="description" rows="4" required></textarea>
+  
+          <!-- Cancel and Upload buttons in the same line -->
+          <div class="gallery-upload-button-container">
+            <button type="button" class="gallery-upload-cancel-button">Cancel</button>
+            <button type="submit">Upload</button>
           </div>
-        </div>
-
-        <!-- Edit Dialog -->
-        <div class="gallery-edit-dialog">
-          <div class="gallery-edit-card">
-            <div class="gallery-edit-card-title">Edit Item</div>
-
-            <form class="gallery-edit-form">
-
-              <div class="gallery-edit-hint">Title:</div>
-              <input type="text" class="gallery-edit-title" name="galleryEditTitle" required>
-
-              <div class="gallery-edit-hint">Description:</div>
-              <textarea id="gallery-edit-description" class="gallery-edit-description" name="galleryEditDescription" rows="4" required></textarea>
-
-              <!-- Cancel and Save buttons in the same line -->
-              <div class="gallery-edit-button-container">
-                <button type="button" class="gallery-edit-cancel-button">Cancel</button>
-                <button type="submit">Save</button>
-              </div>
-
-            </form>
+  
+        </form>
+      </div>
+    </div>
+  
+    <!-- Edit Dialog -->
+    <div class="gallery-edit-dialog">
+      <div class="gallery-edit-card">
+        <div class="gallery-edit-card-title">Edit Item</div>
+  
+        <form class="gallery-edit-form">
+  
+          <div class="gallery-edit-hint">Title</div>
+          <input type="text" class="gallery-edit-title" name="galleryEditTitle" required>
+  
+          <div class="gallery-edit-hint">Description</div>
+          <textarea id="gallery-edit-description" class="gallery-edit-description" name="galleryEditDescription" rows="4" required></textarea>
+  
+          <!-- Cancel and Save buttons in the same line -->
+          <div class="gallery-edit-button-container">
+            <button type="button" class="gallery-edit-cancel-button">Cancel</button>
+            <button type="submit">Save</button>
           </div>
-        </div>
+  
+        </form>
+      </div>
+    </div>
+  
       `
 
       // Call the script function to handle authentication state and data fetching
@@ -223,32 +224,71 @@ function createItemCard(box) {
     }
 
     // Create a card container for the item
+
     const cardContainer = document.createElement('div')
-    cardContainer.classList.add('card-item-container')
+    cardContainer.classList.add('card-gallery-container')
 
     // Create the item information container
     const itemInfo = document.createElement('div')
-    itemInfo.classList.add('item-info-container')
+    itemInfo.classList.add('item-gallery-container')
 
-    // Create and set the title element
+    const itemImgGallery = document.createElement('div')
+    itemImgGallery.classList.add('item-img-gallery')
+
+    itemInfo.appendChild(itemImgGallery)
+
+    
+    const imageElement = document.createElement('img')
+    imageElement.classList.add('item-img')
+    imageElement.src = box.getImageUrl()
+
+    itemImgGallery.appendChild(imageElement)
+
+    const itemInfoGallery = document.createElement('div')
+    itemInfoGallery.classList.add('item-info-gallery')
+
+    itemInfo.appendChild(itemInfoGallery)
+
     const titleElement = document.createElement('h2')
     titleElement.classList.add('item-title')
     titleElement.textContent = box.getTitle()
+
+    itemInfoGallery.appendChild(titleElement)
+
+    const descriptionElement = document.createElement('p')
+    descriptionElement.classList.add('item-description')
+    descriptionElement.textContent = box.getDescription()
+
+    itemInfoGallery.appendChild(descriptionElement)
+
+
+
+
+ 
+    // Create and set the title element
+   
     
     // Create and set the author element
     const authorElement = document.createElement('p')
     authorElement.classList.add('item-author')
     authorElement.textContent = `By: ${box.getFullName()}`
 
+
+  
     // Create and set the description element
-    const descriptionElement = document.createElement('p')
-    descriptionElement.classList.add('item-description')
-    descriptionElement.textContent = box.getDescription()
+   
+
+    const itemButtonGallery = document.createElement('div')
+    itemButtonGallery.classList.add('item-buttons-gallery')
+
+
 
     // Create and set the edit action button
     const editButton = document.createElement('div')
     editButton.classList.add('item-edit-action')
     editButton.textContent = 'Edit'
+
+    itemButtonGallery.appendChild(editButton)
 
     // Add event listener to the edit button
     editButton.addEventListener('click', () => {
@@ -261,6 +301,9 @@ function createItemCard(box) {
     deleteButton.classList.add('item-delete-action')
     deleteButton.textContent = 'Delete'
 
+    itemButtonGallery.appendChild(deleteButton)
+
+
     // Add event listener to the delete button
     deleteButton.addEventListener('click', () => {
       // Call function to open delete dialog when delete button is clicked
@@ -272,22 +315,18 @@ function createItemCard(box) {
     likeButton.classList.add('item-like-action')
     likeButton.textContent = 'Like'
 
+    itemButtonGallery.appendChild(likeButton)
+
     // Create and set the image element
-    const imageElement = document.createElement('img')
-    imageElement.classList.add('item-img')
-    imageElement.src = box.getImageUrl()
    
     // Append all elements to the item information container
-    itemInfo.appendChild(titleElement)
-    itemInfo.appendChild(authorElement)
-    itemInfo.appendChild(descriptionElement)
-    itemInfo.appendChild(editButton)
-    itemInfo.appendChild(deleteButton)
-    itemInfo.appendChild(likeButton)
+
 
     // Append the item information container and image to the card container
     cardContainer.appendChild(itemInfo)
-    cardContainer.appendChild(imageElement)
+    cardContainer.appendChild(authorElement)
+    cardContainer.appendChild(itemButtonGallery)
+
 
     // Return the created card container
     return cardContainer 
@@ -313,7 +352,10 @@ function openGalleryEditDialog(box) {
     }
 
     // Get the edit dialog element by class name
+  
     const editDialog = document.querySelector('.gallery-edit-dialog')
+    editDialog.classList.add('active')
+
 
     // Event listener for submitting the upload form and handling upload logic
     const uploadForm = document.querySelector('.gallery-edit-form')
@@ -329,7 +371,6 @@ function openGalleryEditDialog(box) {
     descriptionInput.value = box.getDescription()
 
     // Show the edit dialog
-    editDialog.classList.add('active')
 
     // Get the cancel button inside the edit dialog
     const cancelButton = editDialog.querySelector('.gallery-edit-cancel-button')

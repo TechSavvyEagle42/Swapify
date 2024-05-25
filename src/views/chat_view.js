@@ -11,7 +11,7 @@ const renderChat = {
         </aside>
 
         <main class="main-content">
-          <custom-chat-component></custom-chat-component>
+          <custom-chat-component ></custom-chat-component>
         </main>
 
         <aside class="right-aside">

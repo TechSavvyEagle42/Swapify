@@ -40,8 +40,18 @@ class Component extends HTMLElement {
     try {
       // Define HTML content for the contact list
       this.innerHTML = /*html*/ `
-        <div class="contact-list">
-        </div>
+      <div class="contacts-container">
+  <div class="messages-list">
+    <p class="message-text">Message</p>
+  </div>
+  <div class="contacts">
+    <div class="contact-list">
+      <div class="contact-name">
+        
+      </div>
+    </div>
+  </div>
+</div>
       `
       
       // Call the script function to handle authentication state and data fetching

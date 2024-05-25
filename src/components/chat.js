@@ -45,19 +45,31 @@ class Component extends HTMLElement {
     try {
       // Define HTML content for the chat component
       this.innerHTML = /*html*/ `
-        <div class="chat-avatar-container">
-          <img class="chat-avatar-img" src="" alt="Avatar">
+      <div class="chats">
+
+      <div class="chat-avatar-container">
+           <img class="chat-avatar-img" src="" alt="Avatar"> 
           <span class="chat-avatar-name"></span>
         </div>
-
-        <div class="chat-message-container">
-          <!-- Messages will be rendered here -->
+  
+  
+        <div class="message-container">
+        <div class="chat-message-back">
+          <div class="chat-message-outer">
+          <div class="chat-message-container">
+              <!-- Messages will be rendered here -->
+            </div></div></div>
+          
+            <div class="chat-input-container">
+              <input type="text" class="chat-input" placeholder="Type your message here"> 
+              <i class="chat-send-button fi fi-sr-paper-plane-top"></i>
+            </div>
+  
         </div>
-
-        <div class="chat-input-container">
-          <input type="text" class="chat-input" placeholder="Type your message here"> 
-          <i class="chat-send-button fi fi-sr-paper-plane-top"></i>
-        </div>
+       
+  
+  </div>
+  
       `
       
       // Fetch chat data asynchronously
